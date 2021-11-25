@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import sa.edu.tuwaiq.fockos.R
-import sa.edu.tuwaiq.fockos.View.model.ImageModel
-import sa.edu.tuwaiq.fockos.View.model.Photo
+import sa.edu.tuwaiq.fockos.model.ImageModel
+
 //@hassn
 class ImageRecyclerViewAdapter() :
     RecyclerView.Adapter<ImageRecyclerViewAdapter.ImageViewHolder>() {

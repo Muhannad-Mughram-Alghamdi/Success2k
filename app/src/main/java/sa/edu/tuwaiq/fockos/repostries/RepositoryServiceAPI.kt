@@ -1,9 +1,8 @@
-package sa.edu.tuwaiq.fockos.View.repostries
+package sa.edu.tuwaiq.fockos.repostries
 
-import android.content.Context
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import sa.edu.tuwaiq.fockos.View.api.ImageAPI
+import sa.edu.tuwaiq.fockos.api.ImageAPI
 
 //@Abdullah Alfaraj, Abdulaziz Alrajeh
 

@@ -1,4 +1,4 @@
-package sa.edu.tuwaiq.fockos.View.model
+package sa.edu.tuwaiq.fockos.model
 
 
 import com.google.gson.annotations.SerializedName
