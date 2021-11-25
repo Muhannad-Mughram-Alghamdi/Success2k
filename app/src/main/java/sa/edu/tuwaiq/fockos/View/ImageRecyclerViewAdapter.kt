@@ -8,18 +8,19 @@ import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import sa.edu.tuwaiq.fockos.R
 import sa.edu.tuwaiq.fockos.model.ImageModel
+import sa.edu.tuwaiq.fockos.model.Photo
 
 //@Hassan and Abdullah
 class ImageRecyclerViewAdapter(val viewMode:MainViewModel) :
     RecyclerView.Adapter<ImageRecyclerViewAdapter.ImageViewHolder>() {
 
-    val DIFF_CALBACK = object : DiffUtil.ItemCallback<ImageModel>() {
-        override fun areItemsTheSame(oldItem: ImageModel, newItem: ImageModel): Boolean {
-            TODO("Not yet implemented")
+    val DIFF_CALBACK = object : DiffUtil.ItemCallback<Photo>() {
+        override fun areItemsTheSame(oldItem: Photo, newItem: Photo): Boolean {
+            return oldItem.id == newItem.id
         }
 
-        override fun areContentsTheSame(oldItem: ImageModel, newItem: ImageModel): Boolean {
-            TODO("Not yet implemented")
+        override fun areContentsTheSame(oldItem: Photo, newItem: Photo): Boolean {
+            return oldItem == newItem
         }
 
 
@@ -48,6 +49,10 @@ class ImageRecyclerViewAdapter(val viewMode:MainViewModel) :
 
     override fun getItemCount(): Int {
         return differ.currentList.size
+    }
+
+    fun submitList(list:List<Photo>){
+        differ.submitList(list)
     }
 
     class ImageViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

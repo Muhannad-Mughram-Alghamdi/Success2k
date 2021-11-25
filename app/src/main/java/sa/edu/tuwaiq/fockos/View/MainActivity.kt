@@ -18,23 +18,6 @@ class MainActivity : AppCompatActivity() {
         locationPermission()
 
     }
-    override fun onRequestPermissionsResult(
-        requestCode: Int, permissions: Array<out String>, grantResults: IntArray
-    ) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-        when (requestCode) {
-            LOCATION_PERMISSION_REQ_CODE -> {
-                if (grantResults.isNotEmpty() &&
-                    grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    // permission granted
-                } else {
-                    // permission denied
-                    Toast.makeText(this, "You need to grant permission to access location",
-                        Toast.LENGTH_SHORT).show()
-                }
-            }
-        }
-    }
 
 
     fun locationPermission(){
