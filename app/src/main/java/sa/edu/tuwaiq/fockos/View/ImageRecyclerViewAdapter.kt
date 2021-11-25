@@ -9,8 +9,8 @@ import androidx.recyclerview.widget.DiffUtil
 import sa.edu.tuwaiq.fockos.R
 import sa.edu.tuwaiq.fockos.model.ImageModel
 
-//@hassn
-class ImageRecyclerViewAdapter() :
+//@Hassan and Abdullah
+class ImageRecyclerViewAdapter(val viewMode:MainViewModel) :
     RecyclerView.Adapter<ImageRecyclerViewAdapter.ImageViewHolder>() {
 
     val DIFF_CALBACK = object : DiffUtil.ItemCallback<ImageModel>() {
@@ -51,5 +51,6 @@ class ImageRecyclerViewAdapter() :
     }
 
     class ImageViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+
     }
 }
