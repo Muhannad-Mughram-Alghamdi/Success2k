@@ -5,12 +5,20 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.RecyclerView
+import com.google.android.gms.location.FusedLocationProviderClient
 import sa.edu.tuwaiq.fockos.R
+import sa.edu.tuwaiq.fockos.model.Photo
 
 
 class MainFragment : Fragment() {
 
 //@hassan
+
+    private lateinit var fusedLocationClient: FusedLocationProviderClient
+    var images = mutableListOf<Photo>()
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
