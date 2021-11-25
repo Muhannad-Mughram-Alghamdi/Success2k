@@ -1,9 +1,9 @@
-package sa.edu.tuwaiq.fockos.View.api
+package sa.edu.tuwaiq.fockos.api
 
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
-import sa.edu.tuwaiq.fockos.View.model.ImageModel
+import sa.edu.tuwaiq.fockos.model.ImageModel
 //@Abdullah Alfaraj, Abdulaziz Alrajeh
 
 interface ImageAPI {
