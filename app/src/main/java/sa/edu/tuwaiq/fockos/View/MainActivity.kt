@@ -7,13 +7,16 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import sa.edu.tuwaiq.fockos.R
+import sa.edu.tuwaiq.fockos.database.RoomServiceRepository
 import sa.edu.tuwaiq.fockos.repostries.RepositoryServiceAPI
 
-private val LOCATION_PERMISSION_REQ_CODE = 1000
+val LOCATION_PERMISSION_REQ_CODE = 1000
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         RepositoryServiceAPI.init(this)
+        RoomServiceRepository.init(this)
+
         setContentView(R.layout.activity_main)
         locationPermission()
 

@@ -1,17 +1,20 @@
 package sa.edu.tuwaiq.fockos.View
 
+import android.content.Context
 import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.ToggleButton
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
+import com.bumptech.glide.Glide
 import sa.edu.tuwaiq.fockos.R
-import sa.edu.tuwaiq.fockos.model.ImageModel
 import sa.edu.tuwaiq.fockos.model.Photo
 
 //@Hassan and Abdullah
-class ImageRecyclerViewAdapter(val viewMode:MainViewModel) :
+class ImageRecyclerViewAdapter(val viewMode:MainViewModel, var fileContext: Context) :
     RecyclerView.Adapter<ImageRecyclerViewAdapter.ImageViewHolder>() {
 
     val DIFF_CALBACK = object : DiffUtil.ItemCallback<Photo>() {
@@ -44,7 +47,13 @@ class ImageRecyclerViewAdapter(val viewMode:MainViewModel) :
 
     override fun onBindViewHolder(holder: ImageViewHolder, position: Int) {
         val item = differ.currentList[position]
-        TODO("bind view with data")
+
+        holder.favoriteToggleButton.isChecked = item.isFavorite
+
+        Glide.with(fileContext)
+            .load(item.urlS)
+            .into(holder.image)
+
     }
 
     override fun getItemCount(): Int {
@@ -56,6 +65,9 @@ class ImageRecyclerViewAdapter(val viewMode:MainViewModel) :
     }
 
     class ImageViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val image: ImageView = itemView.findViewById(R.id.TestImageView)
+        val favoriteToggleButton: ToggleButton = itemView.findViewById(R.id.toggleButtonFav)
+
 
     }
 }

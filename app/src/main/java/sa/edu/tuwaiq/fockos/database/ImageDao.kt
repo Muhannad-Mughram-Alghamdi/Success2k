@@ -9,13 +9,16 @@ import sa.edu.tuwaiq.fockos.model.Photo
 
 @Dao
 interface ImageDao {
-    suspend fun getPhotos()
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertImages(images: List<Photo>)
 
     @Query("SELECT * FROM Photo ")
     suspend fun getImages(): List<Photo>
 
+
+
     @Query("SELECT * FROM Photo WHERE isFavorite")
     suspend fun getFavoriteImages(): List<Photo>
+
+
 }
