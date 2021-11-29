@@ -22,8 +22,6 @@ class RoomServiceRepository(context: Context) {
 
     suspend fun getFavorite() = ImageDao.getFavoriteImages()
 
-
-
     companion object {
         private var instance: RoomServiceRepository? = null
 

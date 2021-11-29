@@ -14,7 +14,6 @@ import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
-import sa.edu.tuwaiq.fockos.R
 import sa.edu.tuwaiq.fockos.databinding.FragmentMainBinding
 import sa.edu.tuwaiq.fockos.model.Photo
 
@@ -25,7 +24,6 @@ class MainFragment : Fragment() {
     private val ImageViewModel:MainViewModel by activityViewModels()
 
 //@hassan
-
     private lateinit var fusedLocationClient: FusedLocationProviderClient
 
     private var images = listOf<Photo>()
@@ -47,10 +45,7 @@ class MainFragment : Fragment() {
         binding = FragmentMainBinding.inflate(inflater,container,false)
         return binding.root
         Log.d(TAG, binding.root.toString())
-
-
     }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         ImageAdapter = ImageRecyclerViewAdapter(ImageViewModel,requireContext())
@@ -66,9 +61,6 @@ class MainFragment : Fragment() {
             Log.d(TAG, ImageAdapter.submitList(this.images).toString())
             images = it
             Log.d(TAG, it.toString())
-
-
-
         })
     }
     private fun getCurrentLocation() {
