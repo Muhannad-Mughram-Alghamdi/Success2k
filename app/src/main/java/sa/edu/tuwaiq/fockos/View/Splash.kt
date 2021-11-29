@@ -7,7 +7,10 @@ import android.os.Handler
 import android.widget.ImageView
 import androidx.constraintlayout.motion.widget.MotionLayout
 import sa.edu.tuwaiq.fockos.R
+import sa.edu.tuwaiq.fockos.database.RoomServiceRepository
 import sa.edu.tuwaiq.fockos.databinding.ActivitySplashBinding
+import sa.edu.tuwaiq.fockos.repostries.RepositoryServiceAPI
+
 //@NOURAH ALNASSER
 class Splash : AppCompatActivity() {
     private lateinit var binding: ActivitySplashBinding
@@ -16,6 +19,8 @@ class Splash : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySplashBinding.inflate(layoutInflater)
+        RepositoryServiceAPI.init(this)
+        RoomServiceRepository.init(this)
         setContentView(binding.root)
 
         val logo:ImageView = findViewById(R.id.imageView7)
