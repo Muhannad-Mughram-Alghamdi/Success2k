@@ -50,8 +50,29 @@ class MainFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         ImageAdapter = ImageRecyclerViewAdapter(ImageViewModel,requireContext())
         binding.MainViewRecyclerView.adapter = ImageAdapter
-        getCurrentLocation()
         observers()
+
+        /*if (ActivityCompat.checkSelfPermission(requireContext(),
+                Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+            fusedLocationClient.lastLocation.addOnSuccessListener { location ->
+                // getting the last known or current location
+                latitude = location.latitude
+                longitude = location.longitude
+                ImageViewModel.call(latitude, longitude)
+                Log.d("return for location lan","${location.latitude}")
+                Log.d("result for location lon","${location.longitude}")
+
+                Log.d("return for lan","${latitude}")
+                Log.d("result for lon","${longitude}")
+
+            }
+                .addOnFailureListener {
+                    Toast.makeText(requireContext(), "Failed on getting current location",
+                        Toast.LENGTH_SHORT).show()
+                }
+
+        }*/
+        getCurrentLocation()
         Log.d(TAG, observers().toString())
 
     }
@@ -68,26 +89,39 @@ class MainFragment : Fragment() {
         Log.d("result current lon","${longitude}")
         // checking location permission
         if (ActivityCompat.checkSelfPermission(requireContext(),
-                Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            // request permission
+                Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+
+            fusedLocationClient.lastLocation.addOnSuccessListener { location ->
+                // getting the last known or current location
+                latitude = location.latitude
+                longitude = location.longitude
+                ImageViewModel.call(latitude, longitude)
+                Log.d("return for location lan","${location.latitude}")
+                Log.d("result for location lon","${location.longitude}")
+
+                Log.d("return for lan","${latitude}")
+                Log.d("result for lon","${longitude}")
+
+            }
+                .addOnFailureListener {
+                    Toast.makeText(requireContext(), "Failed on getting current location",
+                        Toast.LENGTH_SHORT).show()
+                }
+
+        } else
+        {
             ActivityCompat.requestPermissions(requireActivity(),
                 arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), LOCATION_PERMISSION_REQ_CODE)
         }
-        fusedLocationClient.lastLocation.addOnSuccessListener { location ->
-            // getting the last known or current location
-            latitude = location.latitude
-            longitude = location.longitude
-            ImageViewModel.call(latitude, longitude)
-            Log.d("return for location lan","${location.latitude}")
-            Log.d("result for location lon","${location.longitude}")
 
-            Log.d("return for lan","${latitude}")
-            Log.d("result for lon","${longitude}")
+    }
 
-        }
-            .addOnFailureListener {
-                Toast.makeText(requireContext(), "Failed on getting current location",
-                    Toast.LENGTH_SHORT).show()
-            }
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<out String>,
+        grantResults: IntArray
+    ) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        getCurrentLocation()
     }
 }
