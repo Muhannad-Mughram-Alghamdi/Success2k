@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/Toolbar"
+    android:layout_gravity="center">
     <item
-        android:icon="@drawable/ic_fi_sr_world__1_"
+        android:icon="@drawable/fi_rr_world"
         android:title="@string/word"
         app:showAsAction="always|collapseActionView" />
     <item

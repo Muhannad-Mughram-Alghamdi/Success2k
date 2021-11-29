@@ -14,10 +14,8 @@ import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
-import sa.edu.tuwaiq.fockos.R
 import sa.edu.tuwaiq.fockos.databinding.FragmentMainBinding
 import sa.edu.tuwaiq.fockos.model.Photo
-import sa.edu.tuwaiq.fockos.R
 
 private const val TAG = "MainFragment"
 private  var latitude: Double = 0.0
@@ -48,10 +46,7 @@ class MainFragment : Fragment() {
         binding = FragmentMainBinding.inflate(inflater,container,false)
         return binding.root
         Log.d(TAG, binding.root.toString())
-
-
     }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         ImageAdapter = ImageRecyclerViewAdapter(ImageViewModel,requireContext())
@@ -61,16 +56,12 @@ class MainFragment : Fragment() {
         Log.d(TAG, observers().toString())
 
     }
-https://github.com/Muhannad-Mughram-Alghamdi/Success2k/pulls
     fun observers () {
         ImageViewModel.imagesLiveData.observe(viewLifecycleOwner, {
             ImageAdapter.submitList(this.images)
             Log.d(TAG, ImageAdapter.submitList(this.images).toString())
             images = it
             Log.d(TAG, it.toString())
-
-
-
         })
     }
     private fun getCurrentLocation() {
