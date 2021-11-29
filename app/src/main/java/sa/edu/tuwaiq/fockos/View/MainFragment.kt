@@ -24,7 +24,6 @@ class MainFragment : Fragment() {
     private val ImageViewModel:MainViewModel by activityViewModels()
 
 //@hassan
-
     private lateinit var fusedLocationClient: FusedLocationProviderClient
 
     private var images = listOf<Photo>()
