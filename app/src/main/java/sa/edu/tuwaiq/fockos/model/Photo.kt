@@ -1,14 +1,18 @@
-package sa.edu.tuwaiq.fockos.View.model
+package sa.edu.tuwaiq.fockos.model
 
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 //@Abdullah Alfaraj, Abdulaziz Alrajeh
 
+@Entity
 data class Photo(
     @SerializedName("farm")
     val farm: Int,
     @SerializedName("height_s")
     val heightS: Int,
+    @PrimaryKey
     @SerializedName("id")
     val id: String,
     @SerializedName("isfamily")
@@ -28,5 +32,8 @@ data class Photo(
     @SerializedName("url_s")
     val urlS: String,
     @SerializedName("width_s")
-    val widthS: Int
+    val widthS: Int,
+
+    val isFavorite:Boolean = false
+
 )
