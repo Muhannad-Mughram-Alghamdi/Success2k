@@ -15,10 +15,6 @@ interface ImageDao {
     @Query("SELECT * FROM Photo ")
     suspend fun getImages(): List<Photo>
 
-
-
     @Query("SELECT * FROM Photo WHERE isFavorite")
     suspend fun getFavoriteImages(): List<Photo>
-
-
 }
