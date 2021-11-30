@@ -1,4 +1,5 @@
 package sa.edu.tuwaiq.fockos.View
+//@Abdullah Alfaraj, Abdulaziz Alrajeh
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
@@ -14,6 +15,7 @@ import java.lang.Exception
 private const val TAG = "MainViewModel"
 
 class MainViewModel:ViewModel() {
+
     private val RepositoryApi = RepositoryServiceAPI.get()
     private val RoomdatabaseRep = RoomServiceRepository.get()
     val imagesLiveData = MutableLiveData<List<Photo>>()

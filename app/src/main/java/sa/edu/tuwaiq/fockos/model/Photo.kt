@@ -33,7 +33,13 @@ data class Photo(
     val urlS: String,
     @SerializedName("width_s")
     val widthS: Int,
-
+    @SerializedName("date_upload")
+    val dateUpload:String,
+    @SerializedName("date_taken")
+    val dateTaken:String,
+    @SerializedName("last_update")
+    val lastUpdate:String,
+    
     val isFavorite:Boolean = false
 
 )

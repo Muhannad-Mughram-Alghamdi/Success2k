@@ -11,13 +11,11 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.fragment.app.activityViewModels
-import androidx.recyclerview.widget.RecyclerView
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
-import sa.edu.tuwaiq.fockos.R
 import sa.edu.tuwaiq.fockos.databinding.FragmentMainBinding
 import sa.edu.tuwaiq.fockos.model.Photo
-import sa.edu.tuwaiq.fockos.R
+//@Abdullah Alfaraj, Abdulaziz Alrajeh
 
 private const val TAG = "MainFragment"
 private  var latitude: Double = 0.0
@@ -61,7 +59,6 @@ class MainFragment : Fragment() {
         Log.d(TAG, observers().toString())
 
     }
-https://github.com/Muhannad-Mughram-Alghamdi/Success2k/pulls
     fun observers () {
         ImageViewModel.imagesLiveData.observe(viewLifecycleOwner, {
             ImageAdapter.submitList(this.images)
