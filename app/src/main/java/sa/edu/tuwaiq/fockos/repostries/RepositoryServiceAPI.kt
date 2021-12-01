@@ -28,9 +28,7 @@ class RepositoryServiceAPI(val context: Context) {
             if(instance==null){
                 instance = RepositoryServiceAPI(context)
             }
-
         }
-
         fun get():RepositoryServiceAPI{
             return instance?:throw Exception("Api must be initialized")
 

@@ -18,6 +18,15 @@
 
             android:layout_height="wrap_content">
 
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/Toolbar"
+                app:contentScrim="?attr/colorPrimary"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:menu="@menu/toolbar"
+                app:toolbarId="@+id/toolbar" />
+
         </com.google.android.material.appbar.AppBarLayout>
 
         <androidx.recyclerview.widget.RecyclerView
@@ -27,15 +36,6 @@
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
             app:spanCount="3" />
-
-        <androidx.appcompat.widget.Toolbar
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@color/Toolbar"
-            app:contentScrim="?attr/colorPrimary"
-            app:layout_scrollFlags="scroll|enterAlways"
-            app:menu="@menu/toolbar"
-            app:toolbarId="@+id/toolbar" />
 
     </LinearLayout>
 

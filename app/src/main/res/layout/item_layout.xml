@@ -2,7 +2,7 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
     <FrameLayout
@@ -19,7 +19,7 @@
             android:id="@+id/toggleButtonFav"
             android:layout_width="35dp"
             android:layout_height="35dp"
-            android:background="@drawable/ic_baseline_favorite_border_24"
+            android:background="@drawable/favorite_button"
             android:hapticFeedbackEnabled="true"
             android:text="ToggleButton"
             android:textOff=" "
