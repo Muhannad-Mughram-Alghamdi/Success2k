@@ -35,17 +35,10 @@ class MainViewModel:ViewModel() {
                     RoomdatabaseRep.insertImages(this.photos.photo)
                     RoomdatabaseRep.getFavorite()
 
-
-
                 }
             }else{
                 imagesErrorLiveData.postValue(response.message())
                 imagesLiveData.postValue(RoomdatabaseRep.getImages())
-
-
-
-
-
             }
         }catch (e:Exception){
             Log.d(TAG,e.message.toString())

@@ -14,11 +14,10 @@ val LOCATION_PERMISSION_REQ_CODE = 1000
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        RepositoryServiceAPI.init(this)
-        RoomServiceRepository.init(this)
+
 
         setContentView(R.layout.activity_main)
-        locationPermission()
+        // locationPermission()
 
     }
 
@@ -32,4 +31,6 @@ class MainActivity : AppCompatActivity() {
                 arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), LOCATION_PERMISSION_REQ_CODE)
         }
     }
+
+
 }
