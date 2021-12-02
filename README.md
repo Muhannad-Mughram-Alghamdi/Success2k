@@ -14,22 +14,17 @@ FOCKOS is a third party app for flickr meant to delever the best mobile experinc
 ### TABLE OF CONTENTS
 ---
 * APPLICATION
-* WIREFRAMES AND USER STORIES
 * TECHNOLOGY STOCK 
 * FEATURS
 * INSTALLATION 
 * PLANNING
 * APIs
-* USAGE
-* TESTS
 * TEAM MEMBERS
 * CONTREBUTIONS INSTRUCTIONS
 
 ### APPLICATION
 ---
 [github](https://github.com/Muhannad-Mughram-Alghamdi/Success2k/tree/main)
-### WIREFRAMES AND USER STORIES
----
 
 ### TECHNOLOGY STOCK 
 ---
@@ -97,16 +92,10 @@ Just below this, you will find a link pointing to the API explorer of this metho
 |  method          |   flickr.photos.search               |             |
 |  api_key         |   3d70efd66148a45af867f6a64e0d4a6e   |             |
 |  format          |   json                               |             |
-|  nojsoncallback  |   json                               |             |
-|  extras          |   url_s                              |             |
-|  lat             |   flickr.photos.search               |             |
-|  lon             |   flickr.photos.search               |             |
-
-### USAGE
----
-
-### TESTS
----
+|  nojsoncallback  |   url_s                              |             |
+|  extras          |     1                                |             |
+|  lat             |   40.730610                          |             |
+|  lon             |   -73.935242                         |             |
 
 ### TEAM MEMBERS
 ---
