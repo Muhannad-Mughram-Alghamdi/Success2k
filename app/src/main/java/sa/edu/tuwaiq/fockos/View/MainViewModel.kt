@@ -33,7 +33,6 @@ class MainViewModel:ViewModel() {
                     Log.d(TAG,this.toString())
                     imagesLiveData.postValue(this.photos.photo)
                     RoomdatabaseRep.insertImages(this.photos.photo)
-                    RoomdatabaseRep.getFavorite()
 
                 }
             }else{
@@ -43,6 +42,7 @@ class MainViewModel:ViewModel() {
         }catch (e:Exception){
             Log.d(TAG,e.message.toString())
             imagesErrorLiveData.postValue(e.message.toString())
+            Log.d(TAG,"myRoom")
             imagesLiveData.postValue(RoomdatabaseRep.getImages())
 
 

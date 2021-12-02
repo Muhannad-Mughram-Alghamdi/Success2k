@@ -2,6 +2,7 @@ package sa.edu.tuwaiq.fockos.View
 
 import android.Manifest
 import android.content.Context
+import android.content.SharedPreferences
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.util.Log
@@ -20,6 +21,7 @@ import sa.edu.tuwaiq.fockos.model.Photo
 //@Abdullah Alfaraj, Abdulaziz Alrajeh
 
 private const val TAG = "MainFragment"
+
 private  var latitude: Double = 0.0
 private  var longitude: Double =0.0
 class MainFragment : Fragment() {
@@ -36,6 +38,7 @@ class MainFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(requireActivity())
 
     }
@@ -82,7 +85,7 @@ class MainFragment : Fragment() {
     fun observers () {
         ImageViewModel.imagesLiveData.observe(viewLifecycleOwner, {
             ImageAdapter.submitList(it)
-            images = it
+           // images = it
             Log.d(TAG, it.toString())
         })
     }

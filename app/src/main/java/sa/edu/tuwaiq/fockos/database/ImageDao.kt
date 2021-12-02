@@ -13,7 +13,7 @@ interface ImageDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertImages(images: List<Photo>)
 
-    @Query("SELECT * FROM Photo ")
+    @Query("SELECT * FROM photo ")
     suspend fun getImages(): List<Photo>
 
 

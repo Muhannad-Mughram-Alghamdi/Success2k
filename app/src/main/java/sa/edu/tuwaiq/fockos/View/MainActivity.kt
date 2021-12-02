@@ -17,6 +17,8 @@ class MainActivity : AppCompatActivity() {
 
 
         setContentView(R.layout.activity_main)
+        RepositoryServiceAPI.init(this)
+        RoomServiceRepository.init(this)
         // locationPermission()
 
     }
