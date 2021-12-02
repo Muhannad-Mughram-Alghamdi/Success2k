@@ -5,7 +5,9 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 //@Abdullah Alfaraj, Abdulaziz Alrajeh
-
+/**
+ * This a data class where we created our entity for the database
+ */
 @Entity
 data class Photo(
     @SerializedName("farm")
@@ -33,13 +35,7 @@ data class Photo(
     val urlS: String,
     @SerializedName("width_s")
     val widthS: Int,
-    @SerializedName("date_upload")
-    val dateUpload:String,
-    @SerializedName("date_taken")
-    val dateTaken:String,
-    @SerializedName("last_update")
-    val lastUpdate:String,
-    
+
     val isFavorite:Boolean = false
 
 )
