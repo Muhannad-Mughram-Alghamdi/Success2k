@@ -92,9 +92,15 @@ Just below this, you will find a link pointing to the API explorer of this metho
 
 #### Authorization
 
-|Parameter | Type |Description |
-|:---:     |:---: |:---:       |
-|          |      |            |
+|Key               | Value                                | Description |
+|:---:             |:---:                                 |:---:        |
+|  method          |   flickr.photos.search               |             |
+|  api_key         |   3d70efd66148a45af867f6a64e0d4a6e   |             |
+|  format          |   json                               |             |
+|  nojsoncallback  |   json                               |             |
+|  extras          |   url_s                              |             |
+|  lat             |   flickr.photos.search               |             |
+|  lon             |   flickr.photos.search               |             |
 
 ### USAGE
 ---
