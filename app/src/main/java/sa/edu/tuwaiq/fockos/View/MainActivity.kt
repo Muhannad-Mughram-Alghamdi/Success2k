@@ -24,6 +24,8 @@ class MainActivity : AppCompatActivity() {
     }
 
 
+
+
     fun locationPermission(){
 
         if (ActivityCompat.checkSelfPermission(this,
