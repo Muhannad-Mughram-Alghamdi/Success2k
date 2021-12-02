@@ -32,10 +32,10 @@ class MainActivity : AppCompatActivity() {
         // locationPermission()
 
     }
-
     /**
      * the function below is to get the location permission
      */
+
     fun locationPermission(){
 
         if (ActivityCompat.checkSelfPermission(this,

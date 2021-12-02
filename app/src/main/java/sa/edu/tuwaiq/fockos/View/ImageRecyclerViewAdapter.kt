@@ -70,10 +70,11 @@ class ImageRecyclerViewAdapter(val viewMode:MainViewModel, var fileContext: Cont
     override fun onBindViewHolder(holder: ImageViewHolder, position: Int) {
         val item = differ.currentList[position]
 
-        holder.favoriteToggleButton.isChecked = item.isFavorite
+      //  holder.favoriteToggleButton.isChecked = item.isFavorite
 
         Glide.with(fileContext)
             .load(item.urlS)
+            .centerCrop()
             .into(holder.image)
 
     }
@@ -96,8 +97,8 @@ class ImageRecyclerViewAdapter(val viewMode:MainViewModel, var fileContext: Cont
      * The class below is to hold the image view ids
      */
     class ImageViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val image: ImageView = itemView.findViewById(R.id.TestImageView)
-        val favoriteToggleButton: ToggleButton = itemView.findViewById(R.id.toggleButtonFav)
+        val image: ImageView = itemView.findViewById(R.id.imageView)
+      //  val favoriteToggleButton: ToggleButton = itemView.findViewById(R.id.toggleButtonFav)
 
 
     }

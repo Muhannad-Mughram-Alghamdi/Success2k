@@ -6,6 +6,7 @@
     <item
         android:icon="@drawable/fi_rr_world"
         android:title="@string/word"
+        
         app:showAsAction="always|collapseActionView" />
     <item
         android:icon="@drawable/ic_fi_rr_add__1_"

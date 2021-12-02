@@ -2,28 +2,60 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/TestImageView"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="15dp"
+    android:background="#FDFFFFFF"
+    android:backgroundTint="@color/dracula_bottom_toolbar_preview_text"
+    app:cardBackgroundColor="@color/Platinum"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="5dp">
 
-    <ImageView
-        android:id="@+id/TestImageView"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:backgroundTint="@color/Platinum"
+        android:orientation="vertical">
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
 
-        <ToggleButton
-            android:id="@+id/toggleButtonFav"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:background="@drawable/ic_baseline_favorite_border_24"
-            android:hapticFeedbackEnabled="true"
-            android:text="ToggleButton"
-            android:textOff=" "
-            android:textOn=" " />
-    </FrameLayout>
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/imageButton5"
+                android:layout_width="26dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="@color/transparent"
+                app:srcCompat="@drawable/ic_comment" />
+
+            <ImageButton
+                android:id="@+id/imageButton6"
+                android:layout_width="198dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/transparent"
+                app:srcCompat="@drawable/ic_download__1_" />
+
+            <ImageButton
+                android:id="@+id/imageButton8"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/transparent"
+                app:srcCompat="@drawable/ic_share1" />
+        </LinearLayout>
+
+    </LinearLayout>
 
 </androidx.cardview.widget.CardView>
