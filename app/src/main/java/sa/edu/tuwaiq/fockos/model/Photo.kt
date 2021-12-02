@@ -5,7 +5,9 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 //@Abdullah Alfaraj, Abdulaziz Alrajeh
-
+/**
+ * This a data class where we created our entity for the database
+ */
 @Entity
 data class Photo(
     @SerializedName("farm")
