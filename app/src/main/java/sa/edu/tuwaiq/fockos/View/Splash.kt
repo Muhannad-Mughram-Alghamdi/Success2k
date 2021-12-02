@@ -19,8 +19,7 @@ class Splash : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySplashBinding.inflate(layoutInflater)
-        RepositoryServiceAPI.init(this)
-        RoomServiceRepository.init(this)
+
         setContentView(binding.root)
 
         val logo:ImageView = findViewById(R.id.imageView7)

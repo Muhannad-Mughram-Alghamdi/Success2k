@@ -17,7 +17,9 @@ class RepositoryServiceAPI(val context: Context) {
         .addConverterFactory(GsonConverterFactory.create()).build()
     private val retrofitApi = retrofitService.create(ImageAPI::class.java)
 
+
     suspend fun getImages(lat:Double, lon:Double) = retrofitApi.fetchPhotos(lat,lon )
+
 
 
     companion object{
