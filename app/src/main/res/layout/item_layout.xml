@@ -5,15 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
+    <ImageView
+        android:id="@+id/TestImageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:srcCompat="@tools:sample/avatars" />
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
-        <ImageView
-            android:id="@+id/TestImageView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:srcCompat="@tools:sample/avatars" />
 
         <ToggleButton
             android:id="@+id/toggleButtonFav"
@@ -24,7 +24,6 @@
             android:text="ToggleButton"
             android:textOff=" "
             android:textOn=" " />
-
     </FrameLayout>
 
 </androidx.cardview.widget.CardView>
