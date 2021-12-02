@@ -24,7 +24,7 @@ FOCKOS is a third party app for flickr meant to delever the best mobile experinc
 * APIs
 * USAGE
 * TESTS
-* COLLABORATIONS
+* TEAM MEMBERS
 * CONTREBUTIONS INSTRUCTIONS
 
 ### APPLICATION
@@ -65,11 +65,12 @@ The android studio will automaticly recognize the phone and it will show in the 
 ### TESTS
 ---
 
-### COLLABORATIONS
+### TEAM MEMBERS
 ---
-@AbdulazizAlrajeh
-@alfa7158
-@hassan1alwesaibi
-@Nourah1000
+-[Muhannad Alghamdi](https://github.com/Muhannad-Mughram-Alghamdi)
+-[Abdulaziz Alrajeh](https://github.com/AbdulazizAlrajeh)
+-[Abdullah Alfaraj](https://github.com/alfa7158)
+-[hassan alwesaibi](https://github.com/hassan1alwesaibi)
+-[Nourah Mohammed](https://github.com/Nourah1000)
 
 /testspace/tests/:org/:project/:space+?failed_label=failed&passed_label=passed&skipped_label=skipped
